@@ -38,7 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // If your PC does not recognize Keyball, try setting this macro. This macro
 // increases the firmware size by 200 bytes, so it is disabled by default, but
 // it has been reported to work well in such cases.
-//#define SPLIT_WATCHDOG_ENABLE
+#define SPLIT_WATCHDOG_ENABLE
 
 #define SPLIT_TRANSACTION_IDS_KB KEYBALL_GET_INFO, KEYBALL_GET_MOTION, KEYBALL_SET_CPI
 
@@ -77,3 +77,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // To squeeze firmware size
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
+
+#define KEYBALL_SCROLLSNAP_ENABLE 0

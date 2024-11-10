@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_universal(
     KC_TAB   , KC_7     , KC_8     , KC_9     , KC_MINS  ,                            KC_NUHS  , _______  , KC_BTN3  , _______  , KC_BSPC  ,
-   S(KC_QUOT), KC_4     , KC_5     , KC_6     ,S(KC_SCLN),                            S(KC_9)  , KC_BTN1  , KC_UP    , KC_BTN2  , KC_QUOT  ,
+    S(KC_QUOT), KC_4     , KC_5     , KC_6     ,S(KC_SCLN),                            S(KC_9)  , KC_BTN1  , KC_UP    , KC_BTN2  , KC_QUOT  ,
     KC_SLSH  , KC_1     , KC_2     , KC_3     ,S(KC_MINS),                           S(KC_NUHS), KC_LEFT  , KC_DOWN  , KC_RGHT  , _______  ,
     KC_ESC   , KC_0     , KC_DOT   , KC_DEL   , KC_ENT   , KC_BSPC  ,      _______  , _______  , _______  , _______  , _______  , _______
   ),
@@ -68,4 +68,25 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_ballinfo();
     keyball_oled_render_layerinfo();
 }
+#endif
+
+#ifdef COMBO_ENABLE
+const uint16_t PROGMEM c_grave[] = {KC_G, KC_B, COMBO_END};
+const uint16_t PROGMEM c_tilde[] = {KC_T, KC_G, COMBO_END};
+const uint16_t PROGMEM c_pipe[] = {KC_U, KC_J, COMBO_END};
+const uint16_t PROGMEM c_dquote[] = {KC_H, KC_N, COMBO_END};
+const uint16_t PROGMEM c_quote[] = {KC_Y, KC_H, COMBO_END};
+const uint16_t PROGMEM c_equal[] = {KC_F, KC_V, COMBO_END};
+const uint16_t PROGMEM c_colon[] = {KC_J, KC_M, COMBO_END};
+const uint16_t PROGMEM c_unds[] = {KC_R, KC_F, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(c_equal, KC_EQL),
+    COMBO(c_grave, KC_GRV),
+    COMBO(c_pipe, KC_PIPE),
+    COMBO(c_quote, KC_QUOT),
+    COMBO(c_dquote, KC_DQT),
+    COMBO(c_tilde, KC_TILD),
+    COMBO(c_colon, KC_COLN),
+    COMBO(c_unds, KC_UNDS),
+};
 #endif
