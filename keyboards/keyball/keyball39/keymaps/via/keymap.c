@@ -79,6 +79,8 @@ const uint16_t PROGMEM c_quote[] = {KC_Y, KC_H, COMBO_END};
 const uint16_t PROGMEM c_equal[] = {KC_F, KC_V, COMBO_END};
 const uint16_t PROGMEM c_colon[] = {KC_J, KC_M, COMBO_END};
 const uint16_t PROGMEM c_unds[] = {KC_R, KC_F, COMBO_END};
+const uint16_t PROGMEM c_gt[] = {KC_D, KC_C, COMBO_END};
+const uint16_t PROGMEM c_lt[] = {KC_D, KC_E, COMBO_END};
 combo_t key_combos[] = {
     COMBO(c_equal, KC_EQL),
     COMBO(c_grave, KC_GRV),
@@ -88,5 +90,7 @@ combo_t key_combos[] = {
     COMBO(c_tilde, KC_TILD),
     COMBO(c_colon, KC_COLN),
     COMBO(c_unds, KC_UNDS),
+    COMBO(c_gt, KC_GT),
+    COMBO(c_lt, KC_LT),
 };
 #endif
