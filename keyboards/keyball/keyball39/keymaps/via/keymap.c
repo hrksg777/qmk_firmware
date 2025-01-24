@@ -81,6 +81,8 @@ const uint16_t PROGMEM c_colon[] = {KC_J, KC_M, COMBO_END};
 const uint16_t PROGMEM c_unds[] = {KC_R, KC_F, COMBO_END};
 const uint16_t PROGMEM c_gt[] = {KC_D, KC_C, COMBO_END};
 const uint16_t PROGMEM c_lt[] = {KC_D, KC_E, COMBO_END};
+const uint16_t PROGMEM c_hash[] = {KC_X, KC_V, COMBO_END};
+const uint16_t PROGMEM c_dlr[] = {KC_S, KC_F, COMBO_END};
 const uint16_t PROGMEM c_ques[] = {KC_S, KC_X, COMBO_END};
 const uint16_t PROGMEM c_exlm[] = {KC_S, KC_W, COMBO_END};
 combo_t key_combos[] = {
@@ -96,5 +98,7 @@ combo_t key_combos[] = {
     COMBO(c_lt, KC_LT),
     COMBO(c_ques, KC_QUES),
     COMBO(c_exlm, KC_EXLM),
+    COMBO(c_hash, KC_HASH),
+    COMBO(c_dlr, KC_DLR),
 };
 #endif
